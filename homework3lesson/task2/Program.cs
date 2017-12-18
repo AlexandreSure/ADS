@@ -38,7 +38,7 @@ namespace task2
                         }
                     }
                 }
-                if (i % 2 != 0)
+                else
                 {
                     for (int j = a.Length - 1; j != 1; j--)
                     {
