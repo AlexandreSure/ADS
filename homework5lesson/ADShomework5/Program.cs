@@ -26,45 +26,42 @@ namespace ADShomework5
 
         static void Check(int[,] a, CatStep cs, Queue<CatStep> qe)
         {
-            if (cs.x < 9 && cs.y < 9)
-            {
 
-                if (cs.x < 9 && cs.y - 1 >= 0 && a[cs.x, cs.y - 1] != 1)
-                {
-                    CatStep cs1 = new CatStep(cs.value, cs.x, cs.y);
-                    a[cs1.x, cs1.y - 1] = cs1.value + 1;
-                    cs1.y -= 1;
-                    cs1.value += 1;
-                    qe.Enqueue(cs1);
-                }
-                if (cs.x + 1 < 9 && cs.y < 0 && a[cs.x + 1, cs.y] != 1)
-                {
-                    CatStep cs2 = new CatStep(cs.value, cs.x, cs.y);
-                    a[cs2.x + 1, cs2.y] = cs2.value + 1;
-                    cs2.x += 1;
-                    cs2.value += 1;
-                    qe.Enqueue(cs2);
-                }
-                if (cs.x < 9 && cs.y + 1 < 9 && a[cs.x, cs.y + 1] != 1)
-                {
-                    CatStep cs3 = new CatStep(cs.value, cs.x, cs.y);
-                    a[cs3.x, cs3.y + 1] = cs3.value + 1;
-                    cs3.y += 1;
-                    cs3.value += 1;
-                    qe.Enqueue(cs3);
-                }
-                if (cs.x - 1 >= 0 && cs.y < 9 && a[cs.x - 1, cs.y] != 1)
-                {
-                    CatStep cs4 = new CatStep(cs.value, cs.x, cs.y);
-                    a[cs4.x - 1, cs4.y] = cs4.value + 1;
-                    cs4.x -= 1;
-                    cs4.value += 1;
-                    qe.Enqueue(cs4);
-                }
-                if (qe.Count != 0)
-                {
-                    Check(a, qe.Dequeue(), qe);
-                }
+            if (cs.x < 9 && cs.y - 1 >= 0 && a[cs.x, cs.y - 1] == 0)
+            {
+                CatStep cs1 = new CatStep(cs.value, cs.x, cs.y);
+                a[cs1.x, cs1.y - 1] = cs1.value + 1;
+                cs1.y -= 1;
+                cs1.value += 1;
+                qe.Enqueue(cs1);
+            }
+            if (cs.x + 1 < 9 && cs.y > 0 && a[cs.x + 1, cs.y] == 0)
+            {
+                CatStep cs2 = new CatStep(cs.value, cs.x, cs.y);
+                a[cs2.x + 1, cs2.y] = cs2.value + 1;
+                cs2.x += 1;
+                cs2.value += 1;
+                qe.Enqueue(cs2);
+            }
+            if (cs.x < 9 && cs.y + 1 < 9 && a[cs.x, cs.y + 1] == 0)
+            {
+                CatStep cs3 = new CatStep(cs.value, cs.x, cs.y);
+                a[cs3.x, cs3.y + 1] = cs3.value + 1;
+                cs3.y += 1;
+                cs3.value += 1;
+                qe.Enqueue(cs3);
+            }
+            if (cs.x - 1 >= 0 && cs.y < 9 && a[cs.x - 1, cs.y] == 0)
+            {
+                CatStep cs4 = new CatStep(cs.value, cs.x, cs.y);
+                a[cs4.x - 1, cs4.y] = cs4.value + 1;
+                cs4.x -= 1;
+                cs4.value += 1;
+                qe.Enqueue(cs4);
+            }
+            if (qe.Count != 0)
+            {
+                Check(a, qe.Dequeue(), qe);
             }
         }
 
@@ -85,6 +82,7 @@ namespace ADShomework5
             Print(a);
             Queue<CatStep> qe = new Queue<CatStep>();
             CatStep cs = new CatStep(0, 6, 2);
+            a[6, 2] = 9;
             Console.WriteLine("\n");
             Check(a, cs, qe);
             Print(a);
