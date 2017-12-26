@@ -18,8 +18,20 @@ namespace task2
         static void Main(string[] args)
         {
             Node Tree = new Node();
-            string path = "C:\\Users\\йешуа\\source\\repos\\ADShomework6\\Tree.txt";
-            StreamReader sr = new StreamReader(path);
+            Console.WriteLine("Введите путь к файлу: ");
+            string input = Console.ReadLine();
+            char[] c = input.ToCharArray();
+            string newPath = string.Empty;
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] == Convert.ToChar("\\"))
+                {
+                    newPath += c[i] + "\\";
+                }
+                else
+                newPath += c[i];
+            }
+            StreamReader sr = new StreamReader(newPath);
             string temp = sr.ReadLine();
             string[] a = temp.Split(Convert.ToChar(" "));
             for (int i = 0; i < a.Length; i++)
@@ -30,6 +42,17 @@ namespace task2
                 }
                 Tree.Insert(Tree, int.Parse(a[i]));
             }
+            Console.WriteLine("Выберете способ обхода дерева: 1 - preOrder, 2 - inOrder, 3 - postOrder");
+            int choose = int.Parse(Console.ReadLine());
+            switch (choose)
+            {
+                case 1: Tree.preOrder(Tree); break;
+                case 2: Tree.inOrder(Tree); break;
+                case 3: Tree.postOrder(Tree); break;
+                default:
+                    break;
+            }
+            //string path = "C:\\Users\\йешуа\\source\\repos\\ADShomework6\\Tree.txt";
             Tree.Print(Tree);
             Console.WriteLine();
             Tree.Search(Tree, 5);
