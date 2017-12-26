@@ -1,0 +1,7 @@
+C:\Users\йешуа\source\repos\ADShomework6\task2\bin\Debug\task2.exe.config
+C:\Users\йешуа\source\repos\ADShomework6\task2\bin\Debug\task2.exe
+C:\Users\йешуа\source\repos\ADShomework6\task2\bin\Debug\task2.pdb
+C:\Users\йешуа\source\repos\ADShomework6\task2\obj\Debug\task2.csprojResolveAssemblyReference.cache
+C:\Users\йешуа\source\repos\ADShomework6\task2\obj\Debug\task2.csproj.CoreCompileInputs.cache
+C:\Users\йешуа\source\repos\ADShomework6\task2\obj\Debug\task2.exe
+C:\Users\йешуа\source\repos\ADShomework6\task2\obj\Debug\task2.pdb

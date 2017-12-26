@@ -1,0 +1,7 @@
+C:\Users\йешуа\source\repos\ADShomework6\ADShomework6\bin\Debug\ADShomework6.exe.config
+C:\Users\йешуа\source\repos\ADShomework6\ADShomework6\bin\Debug\ADShomework6.exe
+C:\Users\йешуа\source\repos\ADShomework6\ADShomework6\bin\Debug\ADShomework6.pdb
+C:\Users\йешуа\source\repos\ADShomework6\ADShomework6\obj\Debug\task1.csprojResolveAssemblyReference.cache
+C:\Users\йешуа\source\repos\ADShomework6\ADShomework6\obj\Debug\task1.csproj.CoreCompileInputs.cache
+C:\Users\йешуа\source\repos\ADShomework6\ADShomework6\obj\Debug\ADShomework6.exe
+C:\Users\йешуа\source\repos\ADShomework6\ADShomework6\obj\Debug\ADShomework6.pdb
