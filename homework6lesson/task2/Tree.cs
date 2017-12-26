@@ -49,7 +49,7 @@ namespace task2
         public void Insert(Node head, int value)
         {
             Node temp = null;
-            if (head == null
+            if (head == null)
             {
                 head = CreateNewNode(value, null);
                 return;
