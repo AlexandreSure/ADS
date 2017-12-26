@@ -24,6 +24,10 @@ namespace task2
             string[] a = temp.Split(Convert.ToChar(" "));
             for (int i = 0; i < a.Length; i++)
             {
+                if (i == 0)
+                {
+                    Tree = Tree.CreateNewNode(int.Parse(a[i]), null);
+                }
                 Tree.Insert(Tree, int.Parse(a[i]));
             }
             Tree.Print(Tree);
